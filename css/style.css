@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+body {
+  background: rgb(248, 232, 201);
+  background: linear-gradient(0deg, rgb(248, 232, 201) 70%, rgb(225, 143, 143) 99%);
+  overflow-x: hidden;
+}
+
+header {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 0;
+  background-color: #e18f8f;
+}
+header .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+header .logo-wrapper {
+  font-size: xx-large;
+  line-height: 30px;
+}
+header .logo-wrapper a {
+  color: black;
+  display: flex;
+  align-items: center;
+}
+header .logo-wrapper a img {
+  width: 200px;
+}
+@media (max-width: 768px) {
+  header .logo-wrapper a img {
+    width: 100px;
+  }
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header .contact-us {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: white;
+}
+header .contact-us .text {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  header .contact-us {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+main {
+  margin-top: 50px;
+}
+main .first {
+  padding-top: 120px;
+  max-height: 350px;
+  height: 100%;
+  position: relative;
+  /* background-color: #fbd8d5; */
+  /* .pink-backround {
+      position: absolute;
+      left: 0;
+      bottom: -500px;
+      width: 100%;
+      height: 500px;
+      background-image: url("/images/wave.svg");
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    } */
+}
+main .first hgroup {
+  position: relative;
+}
+main .first hgroup h1 {
+  z-index: 1;
+  text-transform: uppercase;
+  position: relative;
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main .first .colored-text {
+  color: #be4343;
+}
+main .first img {
+  position: absolute;
+  right: 0px;
+  bottom: -140px;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  main .first {
+    padding-top: 70px;
+  }
+  main .first h2 {
+    font-size: 1.4rem;
+  }
+  main .first h1 {
+    font-size: 2rem;
+  }
+  main .first img {
+    width: 200px;
+    bottom: -170px;
+  }
+  main .first .pink-backround {
+    height: 100px;
+    bottom: -200px;
+  }
+}
+main .second {
+  margin-top: 150px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  main .second {
+    margin-top: 100px;
+  }
+}
+main .second .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+main .second .big-font {
+  font-size: 3rem;
+}
+main .second .about-img-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+main .second .about-img-wrapper img {
+  height: calc(500px - 13.8888888889vw);
+}
+main .second .about-img-wrapper h2 {
+  text-align: center;
+}
+main .second .about-us {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+main .second .about-us hgroup {
+  max-width: 400px;
+}
+main .second .about-us hgroup h2 {
+  text-align: center;
+  font-size: xx-large;
+  padding-bottom: 1rem;
+}
+main .second .about-us hgroup p {
+  text-align: center;
+  font-size: larger;
+  font-weight: 500;
+}
+main .second .about-us img {
+  max-width: 180px;
+}
+@media (max-width: 768px) {
+  main .second .about-us {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  main .second .about-us img {
+    max-width: 100px;
+  }
+}
+main .second .about-us:nth-child(2) {
+  justify-content: flex-end;
+}
+main .second .about-managers {
+  display: flex;
+  align-items: center;
+  background: #ffdd9c;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-radius: 1.2rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+main .second .about-managers .text-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 70%;
+}
+main .second .about-managers .text-wrapper h2 {
+  font-size: 1.8rem;
+}
+main .second .about-managers .text-wrapper p {
+  font-size: 1.4rem;
+}
+main .second .about-managers img {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  width: 180px;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  main .second .about-managers {
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    height: auto;
+  }
+  main .second .about-managers .text-wrapper h2 {
+    text-align: start;
+  }
+  main .second .about-managers .text-wrapper p {
+    max-width: 80%;
+  }
+  main .second .about-managers .text-wrapper .big-font {
+    font-size: 1.8rem;
+  }
+  main .second .about-managers .text-wrapper .hide-br {
+    display: none;
+  }
+  main .second .about-managers .woman-with-laptop {
+    max-width: 100px;
+    bottom: auto;
+    top: -80px;
+  }
+}
+@media (max-width: 500px) {
+  main .second .about-managers .woman-with-laptop {
+    max-width: 90px;
+    bottom: -44px;
+    right: 0;
+    top: auto;
+  }
+}
+main .second .about-education-wrapper {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 0.4fr;
+  gap: 1rem;
+}
+main .second .about-education-wrapper h2 {
+  grid-column-start: span 2;
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  main .second .about-education-wrapper h2 {
+    grid-column-start: 1;
+  }
+}
+main .second .about-education-wrapper .education-content {
+  position: relative;
+  padding: 1rem 1.2rem;
+  background: #ffdd9c;
+  border-radius: 1.2rem;
+}
+main .second .about-education-wrapper .education-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+main .second .about-education-wrapper .education-content p {
+  font-size: 1.4rem;
+  max-width: 80%;
+}
+main .second .about-education-wrapper .education-content img {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 120px;
+}
+@media (max-width: 768px) {
+  main .second .about-education-wrapper .education-content img {
+    max-width: 80px;
+  }
+}
+main .second .about-education-wrapper .about-sertification .wrapper img {
+  /* width: 200px !important; */
+  max-width: 140px;
+  right: -5px;
+}
+main .second .about-education-wrapper .about-online {
+  grid-area: 2/2/5/2;
+}
+main .second .about-education-wrapper .about-online .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .second .about-education-wrapper .about-online p {
+  max-width: 100%;
+}
+main .second .about-education-wrapper .about-online img {
+  max-width: 100%;
+  position: static;
+}
+@media (max-width: 768px) {
+  main .second .about-education-wrapper .about-online .wrapper {
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .second .about-education-wrapper .about-online p {
+    max-width: fit-content;
+    display: inline;
+    float: left;
+    /* float: left; */
+  }
+  main .second .about-education-wrapper .about-online img {
+    max-width: 80px;
+    float: right;
+    display: inline;
+  }
+}
+main .third {
+  margin-top: 8rem;
+}
+main .third .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+main .third h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+  grid-column-start: span 2;
+}
+main .third img {
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  width: 100%;
+  max-width: 370px;
+  left: 0;
+  z-index: 0;
+}
+main .third ul {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: self-start;
+  gap: 1rem;
+  row-gap: 2rem;
+  width: 80%;
+  align-self: flex-end;
+  z-index: 1;
+}
+main .third li {
+  text-align: center;
+}
+main .third li .image {
+  background: #ffdd9c;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 0.3rem;
+  border-radius: 1.2rem;
+}
+main .third li h3 {
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  main .third ul {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  main .third ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+main .howToSignUp {
+  margin-top: 8rem;
+}
+main .howToSignUp .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .howToSignUp h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+main .howToSignUp .card {
+  background-color: #ffdd9c;
+  border-radius: 1.2rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  max-height: 200px;
+  height: 100%;
+  width: 80%;
+}
+main .howToSignUp .card img {
+  height: 180px;
+}
+main .howToSignUp .card p {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main .howToSignUp .card h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main .howToSignUp .card:nth-child(2),
+main .howToSignUp .card:nth-child(4) {
+  align-self: flex-end;
+  text-align: end;
+}
+@media (max-width: 768px) {
+  main .howToSignUp .container h3 {
+    font-size: 1.5rem;
+  }
+  main .howToSignUp .card img {
+    height: 100px;
+  }
+  main .howToSignUp .card p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 425px) {
+  main .howToSignUp .container h3 {
+    font-size: 1rem;
+  }
+  main .howToSignUp .card {
+    gap: 1rem;
+  }
+  main .howToSignUp .card img {
+    height: 80px;
+  }
+  main .howToSignUp .card p {
+    font-size: 1rem;
+  }
+}
+main .fourth {
+  margin-top: 10rem;
+  height: 500px;
+}
+main .fourth h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main .fourth .container {
+  overflow: hidden;
+  padding: 4rem 0rem;
+}
+@media (max-width: 768px) {
+  main .fourth {
+    margin-top: 5rem;
+  }
+}
+
+.swiper {
+  cursor: grab;
+  max-width: 50%;
+  /* @media (max-width: 600px) {
+      max-width: 300px;
+    }
+    @media (max-width: 400px) {
+      max-width: 200px;
+    } */
+}
+.swiper .swiper-wrapper {
+  margin: auto;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  border-radius: 1.2rem;
+  padding: 1rem;
+  height: 200px;
+  width: 400px;
+  background: #ffdd9c;
+}
+.swiper .swiper-wrapper .swiper-slide .description {
+  font-size: 0.8rem;
+  color: rgb(29, 29, 29);
+  margin-bottom: 1rem;
+}
+.swiper .swiper-wrapper .swiper-slide .text {
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .second .about-education-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  .second .about-education-wrapper .about-online {
+    grid-area: auto !important;
+  }
+  .howToSignUp h2 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

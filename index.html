@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>onlineSchool</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta content="Illustration by Icons 8 from Ouch!" />
+    <!-- <meta content="Illustration by Icons 8 from Ouch!" /> -->
+    <title>TeachBridge</title>
+    <meta name="description" content="Проблемы в учебе? Плохие оценки? Мы поможем улучшить твои знания!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ya.ru">
+    <meta property="og:title" content="Teach-Bridge - ваш мост к знаниям">
+    <meta property="og:description" content="Проблемы в учебе? Плохие оценки? Мы поможем улучшить твои знания">
+    <meta property="og:image" content="images/online-school.png">
+    <meta name="robots" content="all">
+    <link
+      rel="shortcut icon"
+      href="/favicon/favicon.ico"
+      type="image/x-icon"
+      id="faviconTag"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
@@ -19,7 +30,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
   </head>
   <body>
     <header>
@@ -28,8 +40,8 @@
           <a href="#"><img src="/images/logo.png" alt="Teach-Bridge" /></a>
         </div>
         <div class="contact-us">
-          <p class="nimber">8 800 555 35 35</p>
-          <button>Связаться с нами</button>
+          <p class="number">+7 706 4281525</p>
+          <p class="text">Остались вопросы? <br> Свяжитесь с нами</p>
         </div>
       </div>
     </header>
@@ -42,8 +54,8 @@
               <br />
               самыми <span class="colored-text">простыми</span> словами
             </h1>
-            <img src="/images/main.png" alt="" />
-          </hgroup> 
+            <img src="/images/main.png" alt="main picture" />
+          </hgroup>
           <div class="pink-backround"></div>
         </div>
       </section>
@@ -83,24 +95,7 @@
               alt="old-teacher"
             />
           </div>
-          <!-- <div class="about-managers">
-            <div class="text-wrapper">
-              <h2>
-                5 Менеджеров постоянно на связи
-              </h2>
-              <p>
-                Менеджера, закрепленные за каждой группой, находятся на связи
-                порядка 12 часов, чтобы помочь Вам в случае возникновения
-                вопросов.
-              </p>
-            </div>
-            <img
-              src="/images/manager.png"
-              alt="woman-riths-laptop"
-              class="woman-with-laptop"
-            />
-          </div> -->
-          <div class="about-education-wrapper wow bounceInUp">
+          <div class="about-education-wrapper wow animate__fadeInLeftBig">
             <h2>Что мы предлагаем</h2>
             <div class="about-sertification education-content">
               <h2>Отдельная платформа</h2>
@@ -197,22 +192,25 @@
       <section class="howToSignUp">
         <div class="container">
           <h2>Как записаться?</h2>
-          <div class="card">
+          <div class="card wow bounceInRight">
             <p>1</p>
             <img src="/images/online-from.png" alt="online form" />
             <h3>Заполните онлайн форму</h3>
           </div>
-          <div class="card">
+          <div class="card wow bounceInLeft" data-wow-delay=".3s">
             <p>2</p>
-            <img src="/images/connect-to-manager.png" alt="connect to manager" />
+            <img
+              src="/images/connect-to-manager.png"
+              alt="connect to manager"
+            />
             <h3>Наш менеджер свяжется с вами</h3>
           </div>
-          <div class="card">
+          <div class="card wow bounceInRight" data-wow-delay=".6s">
             <p>3</p>
             <img src="/images/success.png" alt="success" />
             <h3>Выберите предметы и группу</h3>
           </div>
-          <div class="card">
+          <div class="card wow bounceInLeft" data-wow-delay=".9s">
             <p>4</p>
             <img src="/images/rocket.png" alt="rocket" />
             <h3>Приступайте к занятиям</h3>
@@ -302,36 +300,7 @@
       </section>
     </main>
     <footer></footer>
-    <script src="/wow.min.js"></script>
-
-    <script>
-      new WOW().init();
-    </script>
-
-    <script type="module">
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      };
-
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
-      const swiper = new Swiper(".swiper", {
-        // If we need pagination
-        // slidesPerView: 3,
-        effect: "cards",
-        autoplay: {
-          delay: 5000,
-        },
-        // pagination: {
-        //   el: ".swiper-pagination",
-        // },
-
-        // Navigation arrows
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
-      });
-    </script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/wow.min.js"></script>
   </body>
 </html>
