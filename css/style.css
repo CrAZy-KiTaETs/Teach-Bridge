@@ -492,6 +492,9 @@ main .fourth .container {
     margin-top: 5rem;
   }
 }
+main .form {
+  margin-bottom: 4rem;
+}
 
 .swiper {
   cursor: grab;
