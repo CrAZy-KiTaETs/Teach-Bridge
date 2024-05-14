@@ -5,6 +5,7 @@
   list-style-type: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -80,6 +81,7 @@ header {
     color: white;
     .text {
       text-align: center;
+      color: white;
     }
     @media (max-width: 768px) {
       flex-direction: column;
@@ -207,83 +209,82 @@ main {
       justify-content: flex-end;
     }
 
-    .about-managers {
-      display: flex;
-      align-items: center;
-      background: #ffdd9c;
-      justify-content: space-between;
-      padding: 1rem 1.2rem;
-      border-radius: 1.2rem;
-      margin-top: 8rem;
-      margin-bottom: 1rem;
-      position: relative;
-      .text-wrapper {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 70%;
-        h2 {
-          font-size: 1.8rem;
-        }
-        p {
-          font-size: 1.4rem;
-        }
-      }
-      img {
-        position: absolute;
-        right: 20px;
-        bottom: 0px;
-        width: 180px;
-        z-index: 0;
-      }
+    // .about-managers {
+    //   display: flex;
+    //   align-items: center;
+    //   background: #ffdd9c;
+    //   justify-content: space-between;
+    //   padding: 1rem 1.2rem;
+    //   border-radius: 1.2rem;
+    //   margin-top: 8rem;
+    //   margin-bottom: 1rem;
+    //   position: relative;
+    //   .text-wrapper {
+    //     position: relative;
+    //     z-index: 1;
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 1rem;
+    //     width: 70%;
+    //     h2 {
+    //       font-size: 1.8rem;
+    //     }
+    //     p {
+    //       font-size: 1.4rem;
+    //     }
+    //   }
+    //   img {
+    //     position: absolute;
+    //     right: 20px;
+    //     bottom: 0px;
+    //     width: 180px;
+    //     z-index: 0;
+    //   }
 
-      @media (max-width: 768px) {
-        justify-content: center;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        justify-content: flex-start;
-        height: auto;
-        .text-wrapper {
-          h2 {
-            text-align: start;
-          }
-          p {
-            max-width: 80%;
-          }
-          .big-font {
-            font-size: 1.8rem;
-          }
-          .hide-br {
-            display: none;
-          }
-        }
+    //   @media (max-width: 768px) {
+    //     justify-content: center;
+    //     padding: 1rem;
+    //     margin-bottom: 1rem;
+    //     justify-content: flex-start;
+    //     height: auto;
+    //     .text-wrapper {
+    //       h2 {
+    //         text-align: start;
+    //       }
+    //       p {
+    //         max-width: 80%;
+    //       }
+    //       .big-font {
+    //         font-size: 1.8rem;
+    //       }
+    //       .hide-br {
+    //         display: none;
+    //       }
+    //     }
 
-        .woman-with-laptop {
-          max-width: 100px;
-          bottom: auto;
-          top: -80px;
-        }
-      }
-      @media (max-width: 500px) {
-        .woman-with-laptop {
-          max-width: 90px;
-          bottom: -44px;
-          right: 0;
-          top: auto;
-        }
-      }
-    }
+    //     .woman-with-laptop {
+    //       max-width: 100px;
+    //       bottom: auto;
+    //       top: -80px;
+    //     }
+    //   }
+    //   @media (max-width: 500px) {
+    //     .woman-with-laptop {
+    //       max-width: 90px;
+    //       bottom: -44px;
+    //       right: 0;
+    //       top: auto;
+    //     }
+    //   }
+    // }
 
     .about-education-wrapper {
       margin-top: 8rem;
       display: grid;
-      grid-template-columns: 1fr 0.4fr;
+      grid-template-columns: 1fr;
       gap: 1rem;
 
       h2 {
-        grid-column-start: span 2;
         font-size: 2.7rem;
         text-align: center;
         margin-bottom: 3rem;
@@ -295,10 +296,8 @@ main {
 
       .education-content {
         position: relative;
-
         padding: 1rem 1.2rem;
         background: #ffdd9c;
-
         border-radius: 1.2rem;
         h2 {
           font-size: 1.8rem;
@@ -307,6 +306,8 @@ main {
         p {
           font-size: 1.4rem;
           max-width: 80%;
+          position: relative;
+          z-index: 1;
         }
         img {
           position: absolute;
@@ -315,55 +316,60 @@ main {
           max-width: 120px;
         }
         @media (max-width: 768px) {
-          img {
-            max-width: 80px;
-          }
-        }
-      }
-
-      .about-sertification {
-        .wrapper {
-          img {
-            /* width: 200px !important; */
-            max-width: 140px;
-            right: -5px;
-          }
-        }
-      }
-
-      .about-online {
-        grid-area: 2/2/5/2;
-        .wrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        p {
-          max-width: 100%;
-        }
-        img {
-          max-width: 100%;
-          position: static;
-        }
-        @media (max-width: 768px) {
-          .wrapper {
-            display: block;
-            flex-direction: row;
-            justify-content: space-between;
-          }
           p {
-            max-width: fit-content;
-            display: inline;
-            float: left;
-            /* float: left; */
-          }
+            max-width: 100%;
+          }          
           img {
+            position: static;
             max-width: 80px;
             float: right;
-            display: inline;
           }
         }
       }
+
+      // .about-sertification {
+      //   .wrapper {
+      //     img {
+      //       /* width: 200px !important; */
+      //       max-width: 140px;
+      //       right: -5px;
+      //     }
+      //   }
+      // }
+
+      // .about-online {
+      //   grid-area: 2/2/5/2;
+      //   .wrapper {
+      //     display: flex;
+      //     flex-direction: column;
+      //     align-items: center;
+      //   }
+      //   p {
+      //     max-width: 100%;
+      //   }
+      //   img {
+      //     max-width: 100%;
+      //     position: static;
+      //   }
+      //   @media (max-width: 768px) {
+      //     .wrapper {
+      //       display: block;
+      //       flex-direction: row;
+      //       justify-content: space-between;
+      //     }
+      //     p {
+      //       max-width: fit-content;
+      //       display: inline;
+      //       float: left;
+      //       /* float: left; */
+      //     }
+      //     img {
+      //       max-width: 80px;
+      //       float: right;
+      //       display: inline;
+      //     }
+      //   }
+      // }
     }
   }
 
@@ -397,6 +403,7 @@ main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-self: self-start;
+      justify-content: space-between;
       gap: 1rem;
       row-gap: 2rem;
       width: 80%;
@@ -405,16 +412,27 @@ main {
     }
     li {
       text-align: center;
+      background: #ffdd9c;
+      border-radius: 1.2rem;
       .image {
-        background: #ffdd9c;
-
         width: 100%;
-        aspect-ratio: 1/1;
+        aspect-ratio: 2/2;
         margin-bottom: 0.3rem;
         border-radius: 1.2rem;
+        position: static;
+        // img {
+        //   position: static;
+        //   height: 100%;
+        //   width: 100%;
+        // }
       }
       h3 {
         font-size: 1.2rem;
+      }
+
+      h3,
+      p {
+        padding: 0 0.3rem 0.3rem;
       }
     }
     @media (max-width: 768px) {
@@ -457,12 +475,16 @@ main {
       img {
         height: 180px;
       }
+
       p {
         position: absolute;
         top: 0;
         left: 1rem;
         font-size: 2rem;
         font-weight: 700;
+      }
+      a {
+        text-decoration: underline;
       }
       h3 {
         font-size: 2rem;
@@ -526,9 +548,18 @@ main {
     @media (max-width: 768px) {
       margin-top: 5rem;
     }
+    @media (max-width: 425px) {
+      height: auto;
+    }
   }
   .form {
     margin-bottom: 4rem;
+    p {
+      padding-top: 1rem;
+    }
+    a {
+      text-decoration: underline;
+    }
   }
 }
 

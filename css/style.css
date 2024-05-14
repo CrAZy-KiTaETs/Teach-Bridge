@@ -5,6 +5,7 @@
   list-style-type: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -71,6 +72,7 @@ header .contact-us {
 }
 header .contact-us .text {
   text-align: center;
+  color: white;
 }
 @media (max-width: 768px) {
   header .contact-us {
@@ -199,80 +201,13 @@ main .second .about-us img {
 main .second .about-us:nth-child(2) {
   justify-content: flex-end;
 }
-main .second .about-managers {
-  display: flex;
-  align-items: center;
-  background: #ffdd9c;
-  justify-content: space-between;
-  padding: 1rem 1.2rem;
-  border-radius: 1.2rem;
-  margin-top: 8rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-main .second .about-managers .text-wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 70%;
-}
-main .second .about-managers .text-wrapper h2 {
-  font-size: 1.8rem;
-}
-main .second .about-managers .text-wrapper p {
-  font-size: 1.4rem;
-}
-main .second .about-managers img {
-  position: absolute;
-  right: 20px;
-  bottom: 0px;
-  width: 180px;
-  z-index: 0;
-}
-@media (max-width: 768px) {
-  main .second .about-managers {
-    justify-content: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    justify-content: flex-start;
-    height: auto;
-  }
-  main .second .about-managers .text-wrapper h2 {
-    text-align: start;
-  }
-  main .second .about-managers .text-wrapper p {
-    max-width: 80%;
-  }
-  main .second .about-managers .text-wrapper .big-font {
-    font-size: 1.8rem;
-  }
-  main .second .about-managers .text-wrapper .hide-br {
-    display: none;
-  }
-  main .second .about-managers .woman-with-laptop {
-    max-width: 100px;
-    bottom: auto;
-    top: -80px;
-  }
-}
-@media (max-width: 500px) {
-  main .second .about-managers .woman-with-laptop {
-    max-width: 90px;
-    bottom: -44px;
-    right: 0;
-    top: auto;
-  }
-}
 main .second .about-education-wrapper {
   margin-top: 8rem;
   display: grid;
-  grid-template-columns: 1fr 0.4fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 main .second .about-education-wrapper h2 {
-  grid-column-start: span 2;
   font-size: 2.7rem;
   text-align: center;
   margin-bottom: 3rem;
@@ -296,6 +231,8 @@ main .second .about-education-wrapper .education-content h2 {
 main .second .about-education-wrapper .education-content p {
   font-size: 1.4rem;
   max-width: 80%;
+  position: relative;
+  z-index: 1;
 }
 main .second .about-education-wrapper .education-content img {
   position: absolute;
@@ -304,46 +241,13 @@ main .second .about-education-wrapper .education-content img {
   max-width: 120px;
 }
 @media (max-width: 768px) {
+  main .second .about-education-wrapper .education-content p {
+    max-width: 100%;
+  }
   main .second .about-education-wrapper .education-content img {
-    max-width: 80px;
-  }
-}
-main .second .about-education-wrapper .about-sertification .wrapper img {
-  /* width: 200px !important; */
-  max-width: 140px;
-  right: -5px;
-}
-main .second .about-education-wrapper .about-online {
-  grid-area: 2/2/5/2;
-}
-main .second .about-education-wrapper .about-online .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .second .about-education-wrapper .about-online p {
-  max-width: 100%;
-}
-main .second .about-education-wrapper .about-online img {
-  max-width: 100%;
-  position: static;
-}
-@media (max-width: 768px) {
-  main .second .about-education-wrapper .about-online .wrapper {
-    display: block;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  main .second .about-education-wrapper .about-online p {
-    max-width: fit-content;
-    display: inline;
-    float: left;
-    /* float: left; */
-  }
-  main .second .about-education-wrapper .about-online img {
+    position: static;
     max-width: 80px;
     float: right;
-    display: inline;
   }
 }
 main .third {
@@ -376,6 +280,7 @@ main .third ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-self: self-start;
+  justify-content: space-between;
   gap: 1rem;
   row-gap: 2rem;
   width: 80%;
@@ -384,16 +289,22 @@ main .third ul {
 }
 main .third li {
   text-align: center;
+  background: #ffdd9c;
+  border-radius: 1.2rem;
 }
 main .third li .image {
-  background: #ffdd9c;
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 2/2;
   margin-bottom: 0.3rem;
   border-radius: 1.2rem;
+  position: static;
 }
 main .third li h3 {
   font-size: 1.2rem;
+}
+main .third li h3,
+main .third li p {
+  padding: 0 0.3rem 0.3rem;
 }
 @media (max-width: 768px) {
   main .third ul {
@@ -440,6 +351,9 @@ main .howToSignUp .card p {
   left: 1rem;
   font-size: 2rem;
   font-weight: 700;
+}
+main .howToSignUp .card a {
+  text-decoration: underline;
 }
 main .howToSignUp .card h3 {
   font-size: 2rem;
@@ -492,8 +406,19 @@ main .fourth .container {
     margin-top: 5rem;
   }
 }
+@media (max-width: 425px) {
+  main .fourth {
+    height: auto;
+  }
+}
 main .form {
   margin-bottom: 4rem;
+}
+main .form p {
+  padding-top: 1rem;
+}
+main .form a {
+  text-decoration: underline;
 }
 
 .swiper {
